@@ -42,4 +42,8 @@ function getClientSSID($clientIP)
 function getClientHostName($clientIP)
 {
     return trim(exec("grep " . escapeshellarg($clientIP) . " /tmp/dhcp.leases | awk '{print $4}'"));
-}
+},
+function getClientHostName($clientIP)
+{
+    return trim(exec("grep " . escapeshellarg($clientIP) . " /tmp/dhcp.leases | awk '{print $4}'"));
+},
